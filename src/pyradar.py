@@ -4,9 +4,6 @@ import json
 import requests
 import warnings
 
-# TO REMOVE
-from dotenv import load_dotenv, find_dotenv
-
 # Leave here to suppress https missing certificate validation warning
 warnings.filterwarnings("ignore")
 
@@ -167,11 +164,6 @@ class QRadarAPI():
 
         return res.json()
 
-
-load_dotenv(find_dotenv())
-# Load .env and environment variables
-SEC_TOKEN = os.getenv("SEC")
-BASE_URL = os.getenv("API_URL")
 
 if __name__ == "__main__":
     print("Pyradar is a module. Not a standalone.")
